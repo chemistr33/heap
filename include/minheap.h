@@ -1,6 +1,6 @@
-#include "heap.h"
 #ifndef __MINHEAP_H__
 #define __MINHEAP_H__
+#include "heap.h"
 
 // Max Min-heap initialization
 Hptr createMin (int cap);
