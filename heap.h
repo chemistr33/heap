@@ -1,5 +1,5 @@
-#ifndef __MAXHEAP_H_
-#define __MAXHEAP_H_
+#ifndef __HEAP_H_
+#define __HEAP_H_
 
 #include <stddef.h>
 
@@ -13,35 +13,28 @@
     (type *)((char *)__mptr - _offsetof (type, member));                      \
   })
 
-typedef struct HeapNode
+// Fully-defined node structure, user-facing, they embed it into their structs
+typedef struct HNode
 {
   int key;
-} HeapNode;
+} HNode;
 
+// Forward declaration of node structure, *incomplete type*
 typedef struct Heap Heap;
 
-// Heap Init
-Heap *createHeap (int capacity);
-
-// Insert element to heap
-void insert (Heap *heap, HeapNode *node);
-
-// Remove and return maximum element (root) from heap
-HeapNode *extractMax (Heap *heap);
-
-// Get maximum element w/o removal
-HeapNode *peek (Heap *heap);
+// Heap pointer typedef
+typedef Heap *Hptr;
 
 // Return size of heap
-int size (Heap *heap);
+int size (Hptr heap);
 
 // Check if heap is empty
-int isEmpty(Heap *heap);
+int isEmpty (Hptr heap);
 
 // Print heap elements
-void printHeap(Heap *heap, void (*print_fptr)(HeapNode *));
+void printHeap (Hptr heap, void (*print_fptr) (HNode *));
 
 // Free heap
-void freeHeap(Heap *heap);
+void freeHeap (Hptr heap);
 
-#endif //  __MAXHEAP_H_
+#endif //  __HEAP_H_

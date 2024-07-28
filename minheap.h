@@ -1,0 +1,17 @@
+#include "heap.h"
+#ifndef __MINHEAP_H__
+#define __MINHEAP_H__
+
+// Max Min-heap initialization
+Hptr createMin (int cap);
+
+// Insert element to heap
+void insertMin (Hptr heap, HNode *node);
+
+// Remove and return minimum element (root) from heap
+HNode *extractMin (Hptr heap);
+
+// Get minimum element w/o removal
+HNode *peekMin (Hptr heap);
+
+#endif //__MINHEAP_H__
