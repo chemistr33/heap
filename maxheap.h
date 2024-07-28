@@ -1,6 +1,6 @@
+#include "heap.h"
 #ifndef __MAXHEAP_H__
 #define __MAXHEAP_H__
-#include "heap.h"
 
 // Max Max-heap initialization
 Hptr createMax (int cap);
