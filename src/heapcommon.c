@@ -16,6 +16,13 @@ isEmpty (Hptr heap)
   return (heap->size == 0);
 }
 
+// Check if heap is full
+int
+isFull (Hptr heap)
+{
+  return (heap->size == heap->cap);
+}
+
 // Print heap elements
 void
 printHeap (Hptr heap, void (*print_fptr) (HNode *))

@@ -2,10 +2,10 @@
 #define __MINHEAP_H__
 #include "heap.h"
 
-// Max Min-heap initialization
+// Min-heap initialization
 Hptr createMin (int cap);
 
-// Insert element to heap
+// Insert element to min-heap
 void insertMin (Hptr heap, HNode *node);
 
 // Remove and return minimum element (root) from heap

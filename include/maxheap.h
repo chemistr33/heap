@@ -2,10 +2,10 @@
 #define __MAXHEAP_H__
 #include "heap.h"
 
-// Max Max-heap initialization
+// Max-heap initialization
 Hptr createMax (int cap);
 
-// Insert element to heap
+// Insert element to max-heap
 void insertMax (Hptr heap, HNode *node);
 
 // Remove and return maximum element (root) from heap
