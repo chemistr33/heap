@@ -1,4 +1,5 @@
 #include "heap_internal.h"
+#include "../include/heap.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -27,7 +28,7 @@ isFull (Hptr heap)
 void
 printHeap (Hptr heap, void (*print_fptr) (HNode *))
 {
-  for (int i = 0; i < heap->nodes[i]; i++)
+  for (int i = 0; i < heap->size; i++)
     {
       print_fptr (heap->nodes[i]);
     }

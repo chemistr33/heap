@@ -1,6 +1,8 @@
-#include "maxheap.h"
 #include "heap_internal.h"
+#include "../include/maxheap.h"
+#include "../include/heap.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 // Max-heap initialization
 Hptr

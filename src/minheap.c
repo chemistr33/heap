@@ -1,6 +1,8 @@
-#include "minheap.h"
 #include "heap_internal.h"
+#include "../include/minheap.h"
+#include "../include/heap.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 // Max Min-heap initialization
 Hptr
@@ -110,5 +112,7 @@ extractMin (Hptr heap)
 HNode *
 peekMin (Hptr heap)
 {
+  if( isEmpty(heap))
+    return NULL;
   return (heap->nodes[0]);
 }

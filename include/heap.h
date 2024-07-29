@@ -31,6 +31,9 @@ int size (Hptr heap);
 // Check if heap is empty
 int isEmpty (Hptr heap);
 
+// Check if heap is full
+int isFull (Hptr heap);
+
 // Print heap elements
 void printHeap (Hptr heap, void (*print_fptr) (HNode *));
 
